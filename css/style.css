@@ -15,8 +15,8 @@ html {
 body {
   text-align: center;
   margin: 0px;
-  color: #01087c;
-  font-size: 16px;
+  color: #073654;
+  font-size: 20px;
   line-height: 1.7;
   font-family: "Heebo", sans-serif;
   overflow-x: hidden;
@@ -32,21 +32,24 @@ body {
 }
 
 section {
-  padding: 108px 0;
+  padding: 72px 0;
   scroll-snap-align: start;
   min-height: 85vh;
-  margin: 35px;
+  max-width: 1600px;
+  margin: 35px auto;
   border-radius: 20px;
   border: 2px solid white;
   background-color: white;
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.5)));
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 
 .section-title {
   position: relative;
   font-size: 36px;
-  margin: 0 0 76px 0;
+  margin: 0 0 48px 0;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -59,7 +62,7 @@ section {
   height: 2px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background: #72e2f0;
+  background: #12171b;
 }
 
 a {
@@ -155,6 +158,8 @@ nav {
   color: #72e2f0;
   font-family: "Montserrat", sans-serif;
   margin-top: 0;
+  background-color: #12171b;
+  border-radius: 20px;
 }
 
 .page-title {
@@ -273,7 +278,7 @@ nav {
 .skills-subtitle {
   margin: 60px 0 0px;
   background: linear-gradient(171deg, #d1e4f3 0%, #dddddd 35%, #e2e2e2 100%);
-  padding: 10px;
+  padding: 10px 10px 20px 10px;
   border-radius: 10px;
 }
 
@@ -390,7 +395,7 @@ nav {
 #contact i:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  color: #3e38f2;
+  color: #0a5b81;
 }
 
 /* Modals*/
@@ -466,7 +471,7 @@ nav {
 }
 
 #myPhone .btn-close:hover {
-  color: #3e38f2;
+  color: #0a5b81;
 }
 
 /* Footer */

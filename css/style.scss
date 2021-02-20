@@ -4,7 +4,8 @@
 $color-main: #72e2f0;
 $color-light: #c3d5f8;
 // $color-light: #5ae3f5;
-$color-hover: #3e38f2;
+$color-text: #073654;
+$color-hover: #0a5b81;
 $color-nav: #12171b;
 $color-background: #dfe4ea;
 $font-text: "Heebo", sans-serif;
@@ -26,9 +27,8 @@ html {
 body {
   text-align: center;
   margin: 0px;
-  color: #01087c;
-  // background-color: red;
-  font-size: 16px;
+  color: $color-text;
+  font-size: 20px;
   line-height: 1.7;
   font-family: $font-text;
   overflow-x: hidden;
@@ -44,10 +44,11 @@ body {
 }
 
 section {
-  padding: 108px 0;
+  padding: 72px 0;
   scroll-snap-align: start;
   min-height: 85vh;
-  margin: 35px;
+  max-width: 1600px;
+  margin: 35px auto;
   border-radius: 20px;
   border: 2px solid white;
   background-color: white;
@@ -55,12 +56,13 @@ section {
     to right bottom,
     (rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5))
   );
+  backdrop-filter: blur(4px);
 }
 
 .section-title {
   position: relative;
   font-size: 36px;
-  margin: 0 0 76px 0;
+  margin: 0 0 48px 0;
   font-family: $font-header;
 }
 
@@ -72,7 +74,7 @@ section {
   width: 50px;
   height: 2px;
   transform: translateX(-50%);
-  background: $color-main;
+  background: $color-nav;
 }
 
 a {
@@ -159,7 +161,8 @@ nav {
   color: $color-main;
   font-family: $font-header;
   margin-top: 0;
-  // padding-top: 20px;
+  background-color: $color-nav;
+  border-radius: 20px;
 }
 
 .page-title {
@@ -276,14 +279,13 @@ nav {
 // }
 .skills-subtitle {
   margin: 60px 0 0px;
-  // box-shadow: 5px 5px 10px;
   background: linear-gradient(
     171deg,
     rgb(209, 228, 243) 0%,
     rgb(221, 221, 221) 35%,
     rgb(226, 226, 226) 100%
   );
-  padding: 10px;
+  padding: 10px 10px 20px 10px;
   border-radius: 10px;
 }
 
