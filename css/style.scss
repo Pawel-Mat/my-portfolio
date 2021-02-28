@@ -1,7 +1,7 @@
 /* Global */
 
-// $color-main: #230a59;
-$color-main: #72e2f0;
+$color-main: #e07833;
+// $color-main: #72e2f0;
 $color-light: #c3d5f8;
 // $color-light: #5ae3f5;
 $color-text: #073654;
@@ -74,7 +74,7 @@ section {
   width: 50px;
   height: 2px;
   transform: translateX(-50%);
-  background: $color-nav;
+  background: $color-main;
 }
 
 a {
@@ -87,13 +87,6 @@ a {
 #home {
   height: 100vh;
   position: relative;
-  // background-image: url("https://images.pexels.com/photos/3575854/pexels-photo-3575854.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  // background-image: url("/img/pexels-pixabay-416779.jpg");
-  // background-image: url("/img/SL-051919-20420-09.jpg");
-
-  // background-position: center center;
-  // background-size: cover;
-  // background-attachment: fixed;
 }
 
 .home-inner {
@@ -122,10 +115,9 @@ nav {
   justify-content: space-around;
   align-items: center;
   background-color: $color-nav;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid $color-main;
   color: $color-light;
   position: fixed;
-  transition: 0.2s ease-out;
   margin: 0;
   z-index: 999;
   transition: 0.8s;
@@ -149,7 +141,7 @@ nav {
 .nav-links li {
   padding: 0 45px 0 45px;
   color: $color-main;
-  transition: 0.2s ease-out;
+  transition: 0.2s linear;
 }
 
 .nav-links li:hover {
@@ -168,7 +160,6 @@ nav {
 .page-title {
   color: $color-main;
   font-size: 60px;
-  margin: 40px 0 0 0;
   position: relative;
   font-family: $font-header;
   color: $color-main;
@@ -189,6 +180,7 @@ nav {
   color: $color-main;
   font-size: 18px;
   margin: 30px 0 0 0;
+  letter-spacing: 3px;
 }
 
 .intro {
@@ -238,7 +230,6 @@ nav {
 /* About */
 
 #about {
-  // background: $color-background;
   height: 100vh;
   scroll-snap-align: start;
 }
@@ -334,39 +325,44 @@ nav {
   //   rgba(255, 255, 255, 1) 100%
   // );
 }
-[class^="skill-"] {
+[class^="project-"] {
   position: relative;
 }
 
-.skill-image {
+.project-image {
   position: absolute;
   width: 50%;
   height: 100%;
   overflow: hidden;
   z-index: 1;
+  // border-radius: 50px;
 }
 
-.skill-image img {
-  width: 100%;
+.project-image img {
+  width: 90%;
   height: 100%;
   object-fit: cover;
   transition: all 0.5s;
+  padding: 30px;
+  border-radius: 40px;
 }
 
-.skill-image img:hover {
-  transform: scale(1.2);
+.project-image img:hover {
+  transform: scale(1.1);
+  // border-radius: 10px;
+  opacity: 0.7;
 }
 
-.skill-right .skill-image {
+.project-right .project-image {
   right: 0;
 }
 
-.skill-right .skill-description {
+.project-right .project-description {
   padding: 36px 55% 36px 0;
   text-align: right;
 }
 
-.skill-left .skill-description {
+.project-left .project-description {
   padding: 36px 0 36px 55%;
   text-align: left;
 }
@@ -451,7 +447,6 @@ nav {
 }
 
 #myPhone h3 {
-  margin-top: 40px;
 }
 #myPhone h2 {
   margin-top: 20px;
@@ -475,7 +470,7 @@ nav {
   background: $color-nav;
   margin: 0 auto;
   height: 8vh;
-  border-top: 1px solid white;
+  border-top: 1px solid $color-main;
 }
 
 .page-footer p {
