@@ -16,7 +16,7 @@ body {
   text-align: center;
   margin: 0px;
   color: #073654;
-  font-size: 20px;
+  font-size: 1.5rem;
   line-height: 1.7;
   font-family: "Heebo", sans-serif;
   overflow-x: hidden;
@@ -488,6 +488,18 @@ nav {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  font-size: 15px;
   font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 768px) {
+  section {
+    margin: 40px 0;
+    width: 100%;
+  }
+  .container {
+    margin: 40px 0;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -28,7 +28,7 @@ body {
   text-align: center;
   margin: 0px;
   color: $color-text;
-  font-size: 20px;
+  font-size: 1.5rem;
   line-height: 1.7;
   font-family: $font-text;
   overflow-x: hidden;
@@ -480,5 +480,17 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 15px;
   font-family: $font-header;
+}
+
+@media (max-width: 768px) {
+  section {
+    margin: 40px 0;
+    width: 100%;
+  }
+  .container {
+    margin: 40px 0;
+    width: 100%;
+  }
 }
