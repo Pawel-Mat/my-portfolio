@@ -2,14 +2,14 @@ gsap.registerPlugin(ScrollTrigger, TextPlugin)
 
 const tl = gsap.timeline({defaults: {ease: "linear"}});
 
-tl.to('.text', {y:"0%", duration: 0.1, stagger: 0.25});
-tl.to('.text1', {duration: 1, text: "// it's up to you..."});
-tl.to('.text2', {duration: 1, text: "if(youWant() === true){"});
-tl.to('.text3', {duration: 0.7, text: "&nbsp&nbsp youCan();"});
-tl.to('.text4', {duration: 0.5, delay: 0.5, text: "}else{"});
-tl.to('.text5', {duration: 1, delay: 0.5, text: "youCant();}"});
-tl.to('.slider', {y:"-100%", duration: 1, delay: 0.5});
-tl.to('.intro', {y:"-100%", duration: 1},"-=1");
+// tl.to('.text', {y:"0%", duration: 0.1, stagger: 0.25});
+// tl.to('.text1', {duration: 1, text: "// it's up to you..."});
+// tl.to('.text2', {duration: 1, text: "if(youWant() === true){"});
+// tl.to('.text3', {duration: 0.7, text: "&nbsp&nbsp youCan();"});
+// tl.to('.text4', {duration: 0.5, delay: 0.5, text: "}else{"});
+// tl.to('.text5', {duration: 1, delay: 0.5, text: "youCant();}"});
+// tl.to('.slider', {y:"-100%", duration: 1, delay: 0.5});
+// tl.to('.intro', {y:"-100%", duration: 1},"-=1");
 tl.fromTo('.page-title, .page-subtitle, nav', {y:"30%", opacity: 0}, {y:"0%", opacity:1, duration: 2 });
 
 gsap.from('.my-pic', {scrollTrigger: {
@@ -34,8 +34,8 @@ const tlProjects = gsap.timeline({scrollTrigger: {
   start: "top 65%",
   toggleActions: "play reverse play reverse"}});
 
-tlProjects.from('.project-left', {x:"-20", duration: 1, opacity: 0})
-tlProjects.from('.project-right', {x:"20", duration: 1, opacity: 0},"-=1")
+tlProjects.from('.project-left', {x:"-50", duration: 1, opacity: 0})
+tlProjects.from('.project-right', {x:"50", duration: 1, opacity: 0},"-=1")
 tlProjects.from('.project-description', {y:"70", duration: 0.5, opacity: 0})
 
 const tlSkills = gsap.timeline({scrollTrigger: {
@@ -45,7 +45,7 @@ const tlSkills = gsap.timeline({scrollTrigger: {
   toggleActions: "play reverse play reverse"}});
 
 tlSkills.from('.skills-subtitle', {y:"70px", duration: 0.4, stagger: 0.1, opacity: 0})
-tlSkills.from('.skills-list li', {x:"random(-200, 200, 5)", y:"random(-150, 150, 5)", duration: 0.5 ,  opacity: 0})
+tlSkills.from('.skills-list li', {x:"random(-100, 100, 5)", y:"random(-150, 150, 5)", duration: 0.5 ,  opacity: 0})
 
 gsap.from('.contact-list li', {scrollTrigger: {
   trigger: '.contact-list',
@@ -63,6 +63,24 @@ gsap.from('.page-footer', {scrollTrigger: {
 window.addEventListener("scroll",  () => {
   const navSticky = document.querySelector("nav");
   navSticky.classList.toggle("nav-sticky", window.scrollY > 0)
+})
+
+const hamburger = document.querySelector('.hamburger');
+const navigation = document.querySelector('.nav-links');
+const navigationLinks = document.querySelectorAll('.nav-links li');
+console.log(navigationLinks);
+hamburger.addEventListener('click', (e) => {
+  e.preventDefault();
+  hamburger.classList.toggle('hamburger-active');
+  navigation.classList.toggle('nav-links-mobile-active');
+});
+
+navigationLinks.forEach((link) => {
+
+ link.addEventListener('click', () => {
+    hamburger.classList.remove('hamburger-active');
+    navigation.classList.remove('nav-links-mobile-active');
+  });
 })
 
 function closeModal() {
