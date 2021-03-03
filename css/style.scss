@@ -125,7 +125,8 @@ nav {
   // margin: 0;
   transition: 0.8s;
   font-size: 15px;
-  // height: 2vw;
+  width: 100%;
+  height: 5vw;
   z-index: 900;
 }
 
@@ -311,7 +312,7 @@ nav {
 
 .skills-list li i {
   font-size: 60px;
-  padding: 0 20px;
+  padding: 20px;
 }
 
 .skills-list span {
@@ -387,11 +388,12 @@ nav {
   width: 80%;
   margin: 20% auto;
   justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
 }
 
 #contact i {
-  font-size: 100px;
+  font-size: 6rem;
   transition: 0.2s ease-out;
   cursor: pointer;
 }
@@ -585,5 +587,28 @@ nav {
 
   .hamburger-active .hamburger-inner::after {
     transform: translateY(-10px) rotate(-45deg);
+  }
+
+  .skills-subtitle h3 {
+    text-align: center;
+  }
+
+  .skills-list {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .skills-list li i {
+    font-size: 40px;
+  }
+  .skills-list span {
+    font-size: 14px;
+  }
+
+  #contact i {
+    font-size: 4rem;
+    padding: 20px;
   }
 }

@@ -42,7 +42,7 @@ const tlSkills = gsap.timeline({scrollTrigger: {
   trigger: ".skills-subtitle", 
   start: "top 65%",
   end: "bottom -20%",
-  toggleActions: "play reverse play reverse"}});
+  toggleActions: "play none none reverse"}});
 
 tlSkills.from('.skills-subtitle', {y:"70px", duration: 0.4, stagger: 0.1, opacity: 0})
 tlSkills.from('.skills-list li', {x:"random(-100, 100, 5)", y:"random(-150, 150, 5)", duration: 0.5 ,  opacity: 0})
