@@ -34,8 +34,8 @@ const tlProjects = gsap.timeline({scrollTrigger: {
   start: "top 65%",
   toggleActions: "play reverse play reverse"}});
 
-tlProjects.from('.project-left', {x:"-50", duration: 1, opacity: 0})
-tlProjects.from('.project-right', {x:"50", duration: 1, opacity: 0},"-=1")
+tlProjects.from('.project-left', {x:"-5", duration: 1, opacity: 0})
+tlProjects.from('.project-right', {x:"5", duration: 1, opacity: 0},"-=1")
 tlProjects.from('.project-description', {y:"70", duration: 0.5, opacity: 0}, "-=0.3")
 
 const tlSkills = gsap.timeline({scrollTrigger: {
@@ -45,7 +45,7 @@ const tlSkills = gsap.timeline({scrollTrigger: {
   toggleActions: "play none none reverse"}});
 
 tlSkills.from('.skills-subtitle', {y:"70px", duration: 0.4, stagger: 0.1, opacity: 0})
-tlSkills.from('.skills-list li', {x:"random(-100, 100, 5)", y:"random(-150, 150, 5)", duration: 0.5 ,  opacity: 0})
+tlSkills.from('.skills-list li', {x:"random(-5, 5, 5)", y:"random(-150, 150, 5)", duration: 0.5 ,  opacity: 0})
 
 gsap.from('.contact-list li', {scrollTrigger: {
   trigger: '.contact-list',
