@@ -2,14 +2,14 @@ gsap.registerPlugin(ScrollTrigger, TextPlugin)
 
 const tl = gsap.timeline({defaults: {ease: "linear"}});
 
-tl.to('.text', {y:"0%", duration: 0.1, stagger: 0.25});
-tl.to('.text1', {duration: 1, text: "// it's up to you..."});
-tl.to('.text2', {duration: 1, text: "if(youWant() === true){"});
-tl.to('.text3', {duration: 0.7, text: "&nbsp&nbsp youCan();"});
-tl.to('.text4', {duration: 0.5, delay: 0.5, text: "}else{"});
-tl.to('.text5', {duration: 1, delay: 0.5, text: "youCant();}"});
-tl.to('.slider', {y:"-100%", duration: 1, delay: 0.5});
-tl.to('.intro', {y:"-100%", duration: 1},"-=1");
+// tl.to('.text', {y:"0%", duration: 0.1, stagger: 0.25});
+// tl.to('.text1', {duration: 1, text: "// it's up to you..."});
+// tl.to('.text2', {duration: 1, text: "if(youWant() === true){"});
+// tl.to('.text3', {duration: 0.7, text: "&nbsp&nbsp youCan();"});
+// tl.to('.text4', {duration: 0.5, delay: 0.5, text: "}else{"});
+// tl.to('.text5', {duration: 1, delay: 0.5, text: "youCant();}"});
+// tl.to('.slider', {y:"-100%", duration: 1, delay: 0.5});
+// tl.to('.intro', {y:"-100%", duration: 1},"-=1");
 tl.fromTo('.page-title, .page-subtitle, nav', {y:"30%", opacity: 0}, {y:"0%", opacity:1, duration: 2 });
 
 gsap.from('.my-pic', {scrollTrigger: {
@@ -25,9 +25,9 @@ gsap.from('.my-description', {scrollTrigger: {
   start: "top 45%",
   toggleActions: "play reverse play reverse"}, 
   y: "70", 
-  stagger: 1,
   opacity: 0,
-  duration: 0.5,});
+  delay: 1.5,
+  duration: 1,}, "=-2");
 
 const tlProjects = gsap.timeline({scrollTrigger: {
   trigger: "#projects", 
