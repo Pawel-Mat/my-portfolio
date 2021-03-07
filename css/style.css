@@ -318,6 +318,7 @@ nav {
   width: 50%;
   height: 100%;
   overflow: hidden;
+  z-index: 10;
 }
 
 .project-image img {
@@ -478,6 +479,9 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+  .home-inner {
+    top: 40%;
+  }
   h1 {
     font-size: 1.5rem;
   }
@@ -646,6 +650,10 @@ nav {
   #contact i {
     font-size: 4rem;
     padding: 20px;
+  }
+  #myPhone {
+    width: auto;
+    height: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
