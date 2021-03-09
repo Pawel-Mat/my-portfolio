@@ -1,9 +1,7 @@
 /* Global */
 
 $color-main: #e07833;
-// $color-main: #72e2f0;
 $color-light: #c3d5f8;
-// $color-light: #5ae3f5;
 $color-text: #073654;
 $color-hover: #0a5b81;
 $color-nav: #12171b;
@@ -104,31 +102,20 @@ nav {
   justify-content: space-around;
   align-items: center;
   transition: 1s ease-out;
-  // font-size: 20px;
-  // margin: 0;
   width: 100%;
   height: 5vh;
   letter-spacing: 2px;
-  // position: fixed;
 }
 
 .hamburger {
   display: none;
 }
 .nav-fixed {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   background-color: $color-nav;
   border-bottom: 1px solid $color-main;
   color: $color-light;
   position: fixed;
-  // top: 0;
-  // margin: 0;
   transition: 1s;
-  // font-size: 15px;
-  // width: 100%;
-  // height: 5vw;
   z-index: 900;
 }
 
@@ -146,10 +133,6 @@ nav {
   justify-content: center;
 }
 
-// .nav-links-mobile li {
-//   display: none;
-// }
-
 .nav-links li {
   padding: 0 45px 0 45px;
   color: $color-main;
@@ -157,17 +140,8 @@ nav {
 }
 
 .nav-links li:hover {
-  // color: $color-hover;
   transform: scale(1.2);
 }
-
-// #logo {
-//   color: $color-main;
-//   font-family: $font-header;
-//   margin-top: 0;
-//   background-color: $color-nav;
-//   border-radius: 20px;
-// }
 
 .page-title {
   color: $color-main;
@@ -242,7 +216,6 @@ nav {
 /* About */
 
 #about {
-  // height: 100vh;
   scroll-snap-align: start;
 }
 
@@ -252,7 +225,6 @@ nav {
 
 .my-pic {
   width: 50%;
-  // position: relative;
   scroll-snap-align: start;
 }
 
@@ -272,14 +244,6 @@ nav {
 
 /* Skills */
 
-// #skills {
-//   background: linear-gradient(
-//     360deg,
-//     $color-background,
-//     rgba(255, 255, 255, 1) 52%,
-//     rgba(255, 255, 255, 1) 100%
-//   );
-// }
 .skills-subtitle {
   margin: 60px 0 0px;
   background: linear-gradient(
@@ -334,7 +298,6 @@ nav {
 }
 
 .project-image {
-  // display: flex;
   position: absolute;
   width: 50%;
   height: 100%;
@@ -343,9 +306,6 @@ nav {
   border-radius: 5px;
 }
 
-// .project-image :hover {
-//   opacity: 0.7;
-// }
 .project-image .row {
   position: absolute;
   top: 0;
@@ -370,7 +330,6 @@ nav {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  // background-color: black;
   z-index: 100;
 }
 
@@ -401,12 +360,6 @@ nav {
   transition: all 0.5s;
 }
 
-// .project-image img:hover {
-//   transform: scale(1.1);
-//   // border-radius: 10px;
-//   opacity: 0.7;
-// }
-
 .project-right .project-image {
   right: 0;
 }
@@ -424,9 +377,7 @@ nav {
 /*Contact*/
 
 #contact {
-  // background-color: #dfe4ea;
   min-height: 85vh;
-  // position: relative;
 }
 
 #contact ul {
@@ -500,8 +451,6 @@ nav {
   background-color: $color-background;
 }
 
-#myPhone h3 {
-}
 #myPhone h2 {
   margin-top: 20px;
 }
@@ -557,7 +506,6 @@ nav {
     left: 0;
     top: 0;
     display: flex;
-    // list-style: none;
     text-decoration: none;
     background-color: $color-nav;
     color: $color-main;
@@ -644,7 +592,6 @@ nav {
   }
 
   #about .row {
-    // display: block;
     flex-wrap: wrap;
   }
   .my-pic {
