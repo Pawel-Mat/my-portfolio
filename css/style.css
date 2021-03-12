@@ -51,6 +51,7 @@ section {
   font-size: 36px;
   margin: 0 0 48px 0;
   font-family: "Montserrat", sans-serif;
+  letter-spacing: 5px;
 }
 
 .section-title::after {
@@ -62,7 +63,7 @@ section {
   height: 2px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background: #e07833;
+  background: #12171b;
 }
 
 a {
@@ -83,7 +84,7 @@ a {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: #e07833;
+  color: #65ddea;
   z-index: -1;
 }
 
@@ -109,7 +110,7 @@ nav {
 
 .nav-fixed {
   background-color: #12171b;
-  border-bottom: 1px solid #e07833;
+  border-bottom: 1px solid #65ddea;
   color: #c3d5f8;
   position: fixed;
   -webkit-transition: 1s;
@@ -118,7 +119,7 @@ nav {
 }
 
 .nav-fixed a {
-  color: #e07833;
+  color: #65ddea;
 }
 
 .nav-fixed #logo {
@@ -137,9 +138,10 @@ nav {
 
 .nav-links li {
   padding: 0 45px 0 45px;
-  color: #e07833;
+  color: #65ddea;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
+  letter-spacing: 3px;
 }
 
 .nav-links li:hover {
@@ -148,11 +150,13 @@ nav {
 }
 
 .page-title {
-  color: #e07833;
+  color: #65ddea;
   font-size: 60px;
   position: relative;
   font-family: "Montserrat", sans-serif;
-  color: #e07833;
+  letter-spacing: 4px;
+  font-weight: 400;
+  color: #65ddea;
 }
 
 .page-title::after {
@@ -164,14 +168,15 @@ nav {
   height: 2px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background: #e07833;
+  background: #65ddea;
 }
 
 .page-subtitle {
-  color: #e07833;
+  color: #65ddea;
   font-size: 18px;
+  font-weight: 400;
   margin: 30px 0 0 0;
-  letter-spacing: 3px;
+  letter-spacing: 8px;
 }
 
 .intro {
@@ -509,7 +514,7 @@ nav {
   background: #12171b;
   margin: 0 auto;
   height: 8vh;
-  border-top: 1px solid #e07833;
+  border-top: 1px solid #65ddea;
 }
 
 .page-footer p {
@@ -546,7 +551,7 @@ nav {
     display: flex;
     text-decoration: none;
     background-color: #12171b;
-    color: #e07833;
+    color: #65ddea;
     height: 100vh;
     width: 100%;
     letter-spacing: 4px;
@@ -594,7 +599,7 @@ nav {
   .hamburger-inner {
     width: 100%;
     height: 3px;
-    background-color: #e07833;
+    background-color: #65ddea;
     position: absolute;
     border-radius: 3px;
     left: 0;
@@ -608,7 +613,7 @@ nav {
   .hamburger-inner::after {
     width: 100%;
     height: 3px;
-    background-color: #e07833;
+    background-color: #65ddea;
     position: absolute;
     border-radius: 3px;
     content: "";

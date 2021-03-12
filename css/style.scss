@@ -1,6 +1,7 @@
 /* Global */
 
-$color-main: #e07833;
+// $color-main: #e07833;
+$color-main: #65ddea;
 $color-light: #c3d5f8;
 $color-text: #073654;
 $color-hover: #0a5b81;
@@ -62,6 +63,7 @@ section {
   font-size: 36px;
   margin: 0 0 48px 0;
   font-family: $font-header;
+  letter-spacing: 5px;
 }
 
 .section-title::after {
@@ -72,7 +74,7 @@ section {
   width: 50px;
   height: 2px;
   transform: translateX(-50%);
-  background: $color-main;
+  background: $color-nav;
 }
 
 a {
@@ -137,6 +139,7 @@ nav {
   padding: 0 45px 0 45px;
   color: $color-main;
   transition: 0.2s linear;
+  letter-spacing: 3px;
 }
 
 .nav-links li:hover {
@@ -148,6 +151,8 @@ nav {
   font-size: 60px;
   position: relative;
   font-family: $font-header;
+  letter-spacing: 4px;
+  font-weight: 400;
   color: $color-main;
 }
 
@@ -165,8 +170,9 @@ nav {
 .page-subtitle {
   color: $color-main;
   font-size: 18px;
+  font-weight: 400;
   margin: 30px 0 0 0;
-  letter-spacing: 3px;
+  letter-spacing: 8px;
 }
 
 .intro {
