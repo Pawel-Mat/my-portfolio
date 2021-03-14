@@ -1,3 +1,4 @@
+/// Languages data ///
 
 const language = {
   english: {
@@ -37,18 +38,20 @@ const language = {
   }
 }
 
+/// GSAP animations ///
+
 gsap.registerPlugin(ScrollTrigger, TextPlugin)
 const tl = gsap.timeline({defaults: {ease: "linear"}});
 
-// tl.to('.text', {y:"0%", duration: 0.1, stagger: 0.25});
-// tl.to('.text1', {duration: 1, text: "// it's up to you..."});
-// tl.to('.text2', {duration: 1, text: "if(youWant() === true){"});
-// tl.to('.text3', {duration: 0.7, text: "&nbsp&nbsp youCan();"});
-// tl.to('.text4', {duration: 0.5, delay: 0.5, text: "}else{"});
-// tl.to('.text5', {duration: 1, delay: 0.5, text: "youCant();}"});
-// tl.to('.slider', {y:"-100%", duration: 1, delay: 0.5});
-// tl.to('.intro', {y:"-100%", duration: 1},"-=1");
-// tl.fromTo('.page-title, .page-subtitle, nav', {y:"30%", opacity: 0}, {y:"0%", opacity:1, duration: 2 });
+tl.to('.text', {y:"0%", duration: 0.1, stagger: 0.25});
+tl.to('.text1', {duration: 1, text: "// it's up to you..."});
+tl.to('.text2', {duration: 1, text: "if(youWant() === true){"});
+tl.to('.text3', {duration: 0.7, text: "&nbsp&nbsp youCan();"});
+tl.to('.text4', {duration: 0.5, delay: 0.5, text: "}else{"});
+tl.to('.text5', {duration: 1, delay: 0.5, text: "youCant();}"});
+tl.to('.slider', {y:"-100%", duration: 1, delay: 0.5});
+tl.to('.intro', {y:"-100%", duration: 1},"-=1");
+tl.fromTo('.page-title, .page-subtitle, nav', {y:"30%", opacity: 0}, {y:"0%", opacity:1, duration: 2 });
 
 gsap.from('.my-pic', {scrollTrigger: {
   trigger: '#about',
@@ -136,6 +139,8 @@ gsap.from('.page-footer', {scrollTrigger: {
   toggleActions:"play reverse play reverse"},
   y:"50px", duration: 1})
 
+/// Language change ///
+
 const langEl = document.querySelector('.lang-wrapper');
 const langLink = document.querySelectorAll('.lang-wrapper a');
 const linkHome = document.querySelector('.link-home'); 
@@ -187,10 +192,8 @@ langLink.forEach(el => {
     console.log(attr);
   });
 })
-window.addEventListener("scroll",  () => {
-  const navFixed = document.querySelector("nav");
-  navFixed.classList.toggle("nav-fixed", window.scrollY > 0)
-})
+
+/// Hamburger menu ///
 
 const hamburger = document.querySelector('.hamburger');
 const navigation = document.querySelector('.nav-links');
@@ -203,12 +206,14 @@ hamburger.addEventListener('click', (e) => {
 });
 
 navigationLinks.forEach((link) => {
-
- link.addEventListener('click', () => {
+  
+  link.addEventListener('click', () => {
     hamburger.classList.remove('hamburger-active');
     navigation.classList.remove('nav-links-mobile-active');
   });
 })
+
+/// Modals ///
 
 function closeModal() {
   document.getElementById('overlay').classList.remove('show');
@@ -248,6 +253,12 @@ phone.addEventListener('click', () => {
   openModal('#myPhone')
 });
 
+/// Other ///
+
+window.addEventListener("scroll",  () => {
+  const navFixed = document.querySelector("nav");
+  navFixed.classList.toggle("nav-fixed", window.scrollY > 0)
+})
 const scroll = new SmoothScroll('a[href*="#"]');
 
 
