@@ -7,8 +7,9 @@ $color-text: #073654;
 $color-hover: #0a5b81;
 $color-nav: #12171b;
 $color-background: #dfe4ea;
-$font-text: "Heebo", sans-serif;
-$font-header: "Montserrat", sans-serif;
+$font-text: "Josefin Sans", sans-serif;
+$font-title: "Montserrat", sans-serif;
+$font-header: "Josefin Sans", sans-serif;
 $font-intro: "Inconsolata", monospace;
 
 *,
@@ -100,6 +101,7 @@ a {
 }
 
 nav {
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -109,6 +111,22 @@ nav {
   letter-spacing: 2px;
 }
 
+.lang-wrapper {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  cursor: pointer;
+}
+
+nav .lang-wrapper a {
+  color: $color-hover;
+}
+
+.lang-wrapper .active {
+  color: $color-main;
+}
 .hamburger {
   display: none;
 }
@@ -123,10 +141,6 @@ nav {
 
 .nav-fixed a {
   color: $color-main;
-}
-
-.nav-fixed #logo {
-  color: $color-light;
 }
 
 .nav-links {
@@ -150,7 +164,7 @@ nav {
   color: $color-main;
   font-size: 60px;
   position: relative;
-  font-family: $font-header;
+  font-family: $font-title;
   letter-spacing: 4px;
   font-weight: 400;
   color: $color-main;
@@ -527,6 +541,11 @@ nav {
 
   .nav-links-mobile-active {
     transform: translateX(0vw);
+  }
+
+  .lang-wrapper {
+    right: auto;
+    left: 0;
   }
 
   .hamburger {

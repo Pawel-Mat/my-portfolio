@@ -1,16 +1,54 @@
-gsap.registerPlugin(ScrollTrigger, TextPlugin)
 
+const language = {
+  english: {
+    home: "Home",
+    about: "About",
+    myDescription: "Hi! <br> My name is Pawel and since I can remember I liked to stack various kinds of blocks. Over time, my fun turned into hobby building and creating with the keyboard, which I made a great friendship with. I work as a Windows System Administrator for several years, but the horizon calls me to try my hand as a professional developer. <br>In my free time, I increase my coding knowledge and also relieve my own microprocessor by devoting myself to a good book, riding on a motorcycle or playing a game. <br><br>Dear Sir or Madam, I encourage you to contact me. We will drink coffee with pleasure and talk about the future.",
+    projects: "Projects",
+    skills: "Skills",
+    contact: "Contact",
+    projectRock: "Rock Paper Scissors",
+    rockDescription: "My first JS project. It's boring but it works ;)",
+    projectAdminPanel: "Administration panel",
+    adminPanelDescription: "Project was writed based on provided graphic files. I planed components, sections and created styleguide. I made layout and all elements.",
+    projectGroup: "Group project",
+    groupDescription: "In bootcamp We had one team project. Four people plus Project Manager participated in the project. It takes 3 weeks and was about completion the home page of the furniture store.",
+    projectPortfolioDesc: "My portfolio, One Page Webside.",
+    toolsOthers: "Tools & others",
+    phone: "My mobile:",
+    
+  },
+  polish: {
+    home: "Strona główna",
+    about: "O mnie",
+    myDescription: "Dzień dobry! <br> Nazywam się Paweł i odkąd pamiętam lubiłem układać różnego rodzaju klocki. Z czasem moje zabawy przerodziły się w hobbystyczne budowanie i tworzenie za pomocą klawiatury, z którą świetnie się zaprzyjaźniłem. Od kilku lat pracuję jako administrator systemów Windows, jednak horyzont wzywa mnie do spróbowania swoich sił w profesjonalnej developerce. <br>W wolnych chwilach pogłębiam wiedzę w kodowaniu, a także odciążam swój własny mikroprocesor oddając się dobrej książce, jeździe na motocyklu lub grze. <br><br>Mili Państwo, zachęcam do kontaktu. Z przyjemnością wypijemy kawę i podywagujemy o przyszłości.",
+    projects: "Projekty",
+    skills: "Umiejętności",
+    contact: "Kontakt",
+    projectRock: "Papier Kamień Nożyce",
+    rockDescription: "Mój pierwszy projekt w JS. Jest nudny ale działa ;)",
+    projectAdminPanel: "Panel administracyjny",
+    adminPanelDescription: "Projekt został napisany na podstawie dostarczonych grafik. Zaplanowałem komponenty, sekcje oraz stworzyłem szablon styli (styleguide). Zbudowałem układ strony oraz wszystkie elementy",
+    projectGroup: "Projekt grupowy",
+    groupDescription: "Podczas bootcamp'u uczestniczyłem w projekcie grupowym. Było nas czterech kursantów plus jeden Project Manager. Projekt trwał 3 tygodnie i polegał na uzupełnieniu strony głownej sklepu meblowego.",
+    projectPortfolioDesc: "Moje portfolio. One Page Webside",
+    toolsOthers: "Narzędzia i inne",
+    phone: "Mój telefon: ",
+  }
+}
+
+gsap.registerPlugin(ScrollTrigger, TextPlugin)
 const tl = gsap.timeline({defaults: {ease: "linear"}});
 
-tl.to('.text', {y:"0%", duration: 0.1, stagger: 0.25});
-tl.to('.text1', {duration: 1, text: "// it's up to you..."});
-tl.to('.text2', {duration: 1, text: "if(youWant() === true){"});
-tl.to('.text3', {duration: 0.7, text: "&nbsp&nbsp youCan();"});
-tl.to('.text4', {duration: 0.5, delay: 0.5, text: "}else{"});
-tl.to('.text5', {duration: 1, delay: 0.5, text: "youCant();}"});
-tl.to('.slider', {y:"-100%", duration: 1, delay: 0.5});
-tl.to('.intro', {y:"-100%", duration: 1},"-=1");
-tl.fromTo('.page-title, .page-subtitle, nav', {y:"30%", opacity: 0}, {y:"0%", opacity:1, duration: 2 });
+// tl.to('.text', {y:"0%", duration: 0.1, stagger: 0.25});
+// tl.to('.text1', {duration: 1, text: "// it's up to you..."});
+// tl.to('.text2', {duration: 1, text: "if(youWant() === true){"});
+// tl.to('.text3', {duration: 0.7, text: "&nbsp&nbsp youCan();"});
+// tl.to('.text4', {duration: 0.5, delay: 0.5, text: "}else{"});
+// tl.to('.text5', {duration: 1, delay: 0.5, text: "youCant();}"});
+// tl.to('.slider', {y:"-100%", duration: 1, delay: 0.5});
+// tl.to('.intro', {y:"-100%", duration: 1},"-=1");
+// tl.fromTo('.page-title, .page-subtitle, nav', {y:"30%", opacity: 0}, {y:"0%", opacity:1, duration: 2 });
 
 gsap.from('.my-pic', {scrollTrigger: {
   trigger: '#about',
@@ -98,8 +136,57 @@ gsap.from('.page-footer', {scrollTrigger: {
   toggleActions:"play reverse play reverse"},
   y:"50px", duration: 1})
 
-  
+const langEl = document.querySelector('.lang-wrapper');
+const langLink = document.querySelectorAll('.lang-wrapper a');
+const linkHome = document.querySelector('.link-home'); 
+const linkAbout = document.querySelector('.link-about'); 
+const linkProjects = document.querySelector('.link-projects'); 
+const linkSkills = document.querySelector('.link-skills'); 
+const linkContact = document.querySelector('.link-contact'); 
+const about = document.querySelector('.about-me'); 
+const myDesc = document.querySelector('.my-description p'); 
+const myProjects = document.querySelector('.my-projects'); 
+const mySkills = document.querySelector('.my-skills'); 
+const myContact = document.querySelector('.my-contact'); 
+const projectRock = document.querySelector('.rock-paper h3');
+const pRockDesc = document.querySelector('.rock-paper p');
+const projectAdmin = document.querySelector('.admin-panel h3');
+const pAdminDesc = document.querySelector('.admin-panel p');
+const projectGroup = document.querySelector('.group-project h3');
+const pGroupDesc = document.querySelector('.group-project p');
+const pPortfolioDesc = document.querySelector('.portfolio p');
+const toolsOthers = document.querySelector('.tools-others');
+const myPhone = document.querySelector('.my-phone'); 
 
+langLink.forEach(el => {
+  el.addEventListener('click', () => {
+    langEl.querySelector('.active').classList.remove('active');
+    el.classList.add('active');
+    
+    const attr = el.getAttribute('language');
+    linkHome.textContent = language[attr].home;
+    linkAbout.textContent = language[attr].about;
+    linkProjects.textContent = language[attr].projects;
+    linkSkills.textContent = language[attr].skills;
+    linkContact.textContent = language[attr].contact;
+    about.textContent = language[attr].about;
+    myDesc.innerHTML = language[attr].myDescription;
+    myProjects.textContent = language[attr].projects;
+    mySkills.textContent = language[attr].skills;
+    myContact.textContent = language[attr].contact;
+    projectRock.textContent = language[attr].projectRock;
+    pRockDesc.textContent = language[attr].rockDescription;
+    projectAdmin.textContent = language[attr].projectAdminPanel;
+    pAdminDesc.textContent = language[attr].adminPanelDescription;
+    projectGroup.textContent = language[attr].projectGroup;
+    pGroupDesc.textContent = language[attr].groupDescription;
+    pPortfolioDesc.textContent = language[attr].projectPortfolioDesc;
+    toolsOthers.textContent = language[attr].toolsOthers;
+    myPhone.textContent = language[attr].phone;
+
+    console.log(attr);
+  });
+})
 window.addEventListener("scroll",  () => {
   const navFixed = document.querySelector("nav");
   navFixed.classList.toggle("nav-fixed", window.scrollY > 0)
@@ -162,3 +249,5 @@ phone.addEventListener('click', () => {
 });
 
 const scroll = new SmoothScroll('a[href*="#"]');
+
+

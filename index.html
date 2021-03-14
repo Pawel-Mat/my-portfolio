@@ -4,21 +4,25 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
-        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Lobster&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?r&family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header id="home">
             <nav>
+                <div class="lang-wrapper">
+                    <a language="english" class="active">EN</a>
+                    <a language="polish">PL</a>
+                </div>
                 <ul class="nav-links nav-links-mobile">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" class="link-home">Home</a></li>
+                    <li><a href="#about" class="link-about">About</a></li>
+                    <li><a href="#projects" class="link-projects">Projects</a></li>
+                    <li><a href="#skills" class="link-skills">Skills</a></li>
+                    <li><a href="#contact" class="link-contact">Contact</a></li>
                 </ul>
                 <button class="hamburger">
                     <span class="hamburger-box">
@@ -30,7 +34,7 @@
                 <h1 class="page-title">Pawel Matysiak</h1>
                 <h2 class="page-subtitle">Junior Web Developer</h2>
             </div>
-            <div class="intro">
+            <!-- <div class="intro">
                 <div class="intro-text">
                     <h1 class="hide">
                         <span class="text text1"></span>
@@ -50,17 +54,20 @@
                     
                 </div>
             </div>
-            <div class="slider"></div>
+            <div class="slider"></div> -->
         </header>
         <section id="about">
             <div class="container">
-                <h2 class="section-title">About me</h2>
+                <h2 class="section-title about-me">About</h2>
                 <div class="row">
                     <div class="my-pic">
                         <img src="img/pawel.jpg" alt="my Picture">
                     </div>
                     <div class="my-description">
-                        <p>Hi! My name is Pawel and since I can remember I liked to stack various kinds of blocks. Over time, my fun turned into hobby building and creating with the keyboard, which I made a great friendship with. I work as a Windows System Administrator for several years, but the horizon calls me to try my hand as a professional developer. <br>In my free time, I increase my coding knowledge and also relieve my own microprocessor by devoting myself to a good book, riding on a motorcycle or playing a game. <br><br>Dear Sir or Madam, I encourage you to contact me. We will drink coffee with pleasure and talk about the future.</p>
+                        <p>Hi! <br>My name is Pawel and since I can remember I liked to stack various kinds of blocks. Over time, my fun turned into hobby building and creating with the keyboard, which I made a great friendship with. I work as a Windows System Administrator for several years, but the horizon calls me to try my hand as a professional developer. <br>In my free time, I increase my coding knowledge and also relieve my own microprocessor by devoting myself to a good book, riding on a motorcycle or playing a game. <br><br>Dear Sir or Madam, 
+                            I encourage you to contact me. 
+                            We will drink coffee with pleasure and talk about the
+                             future.</p>
                     </div>
                     
 
@@ -69,7 +76,7 @@
         </section>
         <section id="projects">
             <div class="container">
-                <h2 class="section-title">Projects</h2>
+                <h2 class="section-title my-projects">Projects</h2>
                 <article class="project-left">
                     <div class="project-image">
                         <img src="./img/paper-rock-scissors.png">
@@ -81,7 +88,7 @@
 
                         </div>
                     </div>
-                    <div class="project-description">
+                    <div class="project-description rock-paper">
                         <h3 class="project-title">Rock Paper Scissors</h3>
                         <p>My first JS project. It's boring but it works ;)</p>
                     </div>
@@ -97,7 +104,7 @@
 
                         </div>
                     </div>
-                    <div class="project-description">
+                    <div class="project-description admin-panel">
                         <h3 class="project-title">Administration panel</h3>
                         <p>Project was writed based on provided graphic files. I planed components, sections and created styleguide. I made layout and all elements.</p>
                     </div>
@@ -113,10 +120,10 @@
 
                         </div>
                     </div>
-                    <div class="project-description">
-                        <h3 class="project-title">Group project</h3>
+                    <div class="project-description group-project">
+                        <h3 class="project-title ">Group project</h3>
                         <p>In bootcamp We had one team project. Four people plus Project Manager participated in the project. It takes 3 weeks and was about completion
-                            the home page of the furniture store. It's deployed on heroku so loading can be long. </p>
+                            the home page of the furniture store.</p>
                     </div>
                 </article>
                 <article class="project-right">
@@ -130,7 +137,7 @@
 
                         </div>
                     </div>
-                    <div class="project-description">
+                    <div class="project-description portfolio">
                         <h3 class="project-title">Portfolio</h3>
                         <p>My portfolio, One Page Webside. </p>
                     </div>
@@ -138,7 +145,7 @@
             </div>
         </section>
         <section id="skills">
-            <h2 class="section-title">Skills</h2>
+            <h2 class="section-title my-skills">Skills</h2>
             <div class="container">
                 <div class="skills-subtitle">
                     <h3> Front - end</h3>
@@ -159,7 +166,7 @@
                     </ul>
                 </div>
                 <div class="skills-subtitle">
-                    <h3> Tools & others</h3>
+                    <h3 class="tools-others"> Tools & others</h3>
                     <ul class="skills-list">
                         <li><i class="fab fa-windows"><span>MS Windows Server</span></i></li>
                         <li><i class="fab fa-git-alt"><span>Git</span></i></li>
@@ -172,7 +179,7 @@
         </section>
         <section id="contact">
             <div class="container">
-                <h2 class="section-title">Contact</h2>
+                <h2 class="section-title my-contact">Contact</h2>
                 <ul class="contact-list">
                     <li><a href="https://github.com/Pawel-Mat" target="_blank"><i class="fab fa-github"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/pawe%C5%82-matysiak-07b195166" target="_blank"><i class="fab fa-linkedin"></i></a></li>
@@ -185,7 +192,7 @@
         <div class="overlay" id="overlay">
             <div class="modal" id="myPhone">
               <div class="btn-close js--close-modal"><i class="fas fa-times"></i></div>
-                  <h3> My mobile: </h3>
+                  <h3 class="my-phone"> My mobile: </h3>
                   <h2>+48 693277462</h2>
             </div>
           </div>
