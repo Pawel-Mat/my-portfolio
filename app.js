@@ -29,10 +29,10 @@ const language = {
     projectRock: "Papier Kamień Nożyce",
     rockDescription: "Mój pierwszy projekt w JS. Jest nudny ale działa ;)",
     projectAdminPanel: "Panel administracyjny",
-    adminPanelDescription: "Projekt został napisany na podstawie dostarczonych grafik. Zaplanowałem komponenty, sekcje oraz stworzyłem szablon styli (styleguide). Zbudowałem układ strony oraz wszystkie elementy",
+    adminPanelDescription: "Projekt został napisany na podstawie dostarczonych grafik. Zaplanowałem komponenty, sekcje oraz stworzyłem szablon styli (styleguide). Zbudowałem układ strony oraz wszystkie elementy.",
     projectGroup: "Projekt grupowy",
-    groupDescription: "Podczas bootcamp'u uczestniczyłem w projekcie grupowym. Było nas czterech kursantów plus jeden Project Manager. Projekt trwał 3 tygodnie i polegał na uzupełnieniu strony głownej sklepu meblowego.",
-    projectPortfolioDesc: "Moje portfolio. One Page Webside",
+    groupDescription: "Podczas bootcamp'u uczestniczyłem w projekcie grupowym. Było nas czterech kursantów plus jeden Project Manager. Projekt trwał 3 tygodnie i polegał na uzupełnieniu strony głównej sklepu meblowego.",
+    projectPortfolioDesc: "Moje portfolio. One Page Webside.",
     toolsOthers: "Narzędzia i inne",
     phone: "Mój telefon: ",
   }
