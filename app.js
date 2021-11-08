@@ -15,6 +15,8 @@ const language = {
     projectGroup: "Group project",
     groupDescription: "In bootcamp We had one team project. Four people plus Project Manager participated in the project. It takes 3 weeks and was about completion the home page of the furniture store.",
     projectPortfolioDesc: "My portfolio, One Page Webside.",
+    projectLegalAdviser: "Legal Adviser showcase.",
+    legalAdviserDesc: "Webside-showcase of Legal Adviser. Still in progress....",
     toolsOthers: "Tools & others",
     phone: "My mobile:",
     
@@ -33,6 +35,8 @@ const language = {
     projectGroup: "Projekt grupowy",
     groupDescription: "Podczas bootcamp'u uczestniczyłem w projekcie grupowym. Było nas czterech kursantów plus jeden Project Manager. Projekt trwał 3 tygodnie i polegał na uzupełnieniu strony głównej sklepu meblowego.",
     projectPortfolioDesc: "Moje portfolio. One Page Webside.",
+    projectLegalAdviser: "Strona Radcy Prawnego",
+    legalAdviserDesc: "Strona - wizytówka Radcy prawnego. Wciąż w budowie...",
     toolsOthers: "Narzędzia i inne",
     phone: "Mój telefon: ",
   }
@@ -160,6 +164,8 @@ const pAdminDesc = document.querySelector('.admin-panel p');
 const projectGroup = document.querySelector('.group-project h3');
 const pGroupDesc = document.querySelector('.group-project p');
 const pPortfolioDesc = document.querySelector('.portfolio p');
+const projectLegalAdviser = document.querySelector('.legal-adviser h3');
+const legalAdviserDesc = document.querySelector('.legal-adviser p');
 const toolsOthers = document.querySelector('.tools-others');
 const myPhone = document.querySelector('.my-phone'); 
 
@@ -186,6 +192,8 @@ langLink.forEach(el => {
     projectGroup.textContent = language[attr].projectGroup;
     pGroupDesc.textContent = language[attr].groupDescription;
     pPortfolioDesc.textContent = language[attr].projectPortfolioDesc;
+    projectLegalAdviser.textContent = language[attr].projectLegalAdviser;
+    legalAdviserDesc.textContent = language[attr].legalAdviserDesc;
     toolsOthers.textContent = language[attr].toolsOthers;
     myPhone.textContent = language[attr].phone;
 
